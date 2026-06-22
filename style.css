@@ -6,7 +6,7 @@
   --dark: #111;
   --light: #f5f5f7;
   --white: #fff;
-  --font-display: 'Anton', sans-serif;
+  --font-display: 'Montserrat', sans-serif;
   --font-body: 'Inter', sans-serif;
 }
 
@@ -34,13 +34,15 @@ body {
 }
 
 .nav-logo {
-  font-family: var(--font-display);
-  font-size: 1.6rem;
   text-decoration: none;
-  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
 }
-.logo-swing { color: var(--red); }
-.logo-state { color: var(--blue); margin-left: 6px; }
+.nav-logo-img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
 
 .nav-links {
   display: flex;
@@ -85,11 +87,13 @@ body {
   display: inline-block;
   padding: 14px 32px;
   border-radius: 4px;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 1rem;
   text-decoration: none;
   border: none;
   cursor: pointer;
+  font-family: var(--font-display);
+  letter-spacing: 0.5px;
   transition: opacity 0.2s, transform 0.15s;
 }
 .btn:hover { opacity: 0.88; transform: translateY(-1px); }
@@ -109,6 +113,7 @@ body {
 .hero-text h1 {
   font-family: var(--font-display);
   font-size: 5rem;
+  font-weight: 900;
   line-height: 1;
   margin-bottom: 16px;
   color: var(--dark);
@@ -152,9 +157,12 @@ body {
   text-transform: uppercase;
   color: #aaa;
   margin-bottom: 24px;
+  font-family: var(--font-display);
+  font-weight: 600;
 }
 .tagline-dark h2 {
   font-family: var(--font-display);
+  font-weight: 800;
   font-size: clamp(1.8rem, 3.5vw, 2.8rem);
   line-height: 1.25;
   max-width: 800px;
@@ -171,6 +179,66 @@ body {
   margin: 0 auto;
 }
 
+/* ── ABOUT ── */
+.about {
+  background: var(--white);
+  padding: 80px 60px 80px;
+}
+.about-inner {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.section-eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 12px;
+  font-family: var(--font-display);
+  font-weight: 600;
+}
+.about-text h2 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 2.8rem;
+  margin-bottom: 24px;
+}
+.about-text p {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #444;
+  margin-bottom: 16px;
+}
+.kickstarter-logo {
+  margin-top: 20px;
+  display: flex;
+}
+.kickstarter-logo img {
+  height: 32px;
+  width: auto;
+}
+.about-photo img {
+  width: 280px;
+  max-width: 40vw;
+  border-radius: 12px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* ── CARDS SCATTER ── */
+.cards-scatter {
+  background: var(--white);
+  overflow: hidden;
+  padding: 0;
+}
+.cards-scatter img {
+  width: 100%;
+  display: block;
+}
+
 /* ── BOX PRODUCT ── */
 .box-product {
   background: var(--white);
@@ -178,11 +246,31 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 80px 40px 40px;
-  gap: 24px;
+  gap: 16px;
+}
+.box-deck-eyebrow {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #888;
+}
+.box-deck-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--dark);
+  text-align: center;
+  margin-bottom: 8px;
 }
 .box-product img {
   width: 480px;
   max-width: 80vw;
+  height: 240px;
+  object-fit: contain;
   filter: drop-shadow(0 16px 40px rgba(0,0,0,0.12));
 }
 .box-includes {
@@ -190,6 +278,8 @@ body {
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #666;
+  font-family: var(--font-display);
+  font-weight: 500;
 }
 
 /* ── PRODUCTS ── */
@@ -199,6 +289,7 @@ body {
 }
 .section-title {
   font-family: var(--font-display);
+  font-weight: 800;
   font-size: 2.2rem;
   text-align: center;
   margin-bottom: 64px;
@@ -215,13 +306,24 @@ body {
 }
 .expansion-card:last-child { margin-bottom: 0; }
 
-.expansion-cards-img img {
+.expansion-cards-img {
+  flex-shrink: 0;
   width: 280px;
   max-width: 40vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.expansion-cards-img img {
+  width: 100%;
+  height: 240px;
+  object-fit: contain;
   filter: drop-shadow(0 12px 32px rgba(0,0,0,0.15));
 }
 
 .expansion-eyebrow {
+  font-family: var(--font-display);
+  font-weight: 600;
   font-size: 0.75rem;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -230,13 +332,14 @@ body {
 }
 .expansion-info h3 {
   font-family: var(--font-display);
+  font-weight: 900;
   font-size: 3rem;
   margin-bottom: 16px;
 }
-.expansion-dems h3 { color: var(--blue); }
-.expansion-reps h3 { color: var(--red); }
-.expansion-ind h3  { color: #6a4c9c; }
-.expansion-nsfw h3 { color: #222; }
+.expansion-dems h3  { color: var(--blue); }
+.expansion-reps h3  { color: var(--red); }
+.expansion-ind h3   { color: #444; }
+.expansion-nsfw h3  { color: #222; }
 
 .expansion-includes {
   font-size: 0.9rem;
@@ -244,68 +347,8 @@ body {
   text-transform: uppercase;
   color: #555;
   line-height: 1.5;
-}
-
-/* ── CARDS SCATTER ── */
-.cards-scatter {
-  background: var(--white);
-  overflow: hidden;
-  padding: 0;
-}
-.cards-scatter img {
-  width: 100%;
-  display: block;
-}
-
-/* ── ABOUT ── */
-.about {
-  background: var(--white);
-  padding: 80px 60px 0;
-}
-.about-inner {
-  display: flex;
-  gap: 60px;
-  align-items: flex-start;
-  max-width: 960px;
-  margin: 0 auto 60px;
-}
-.section-eyebrow {
-  font-size: 0.75rem;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: #888;
-  margin-bottom: 12px;
-}
-.about-text h2 {
   font-family: var(--font-display);
-  font-size: 2.8rem;
-  margin-bottom: 24px;
-}
-.about-text p {
-  font-size: 1rem;
-  line-height: 1.75;
-  color: #444;
-  margin-bottom: 16px;
-}
-.kickstarter-logo img {
-  height: 40px;
-  margin-top: 12px;
-}
-.about-photo img {
-  width: 280px;
-  max-width: 40vw;
-  border-radius: 12px;
-  object-fit: cover;
-  flex-shrink: 0;
-}
-.about-banner {
-  width: 100%;
-}
-.about-banner img {
-  width: 100%;
-  display: block;
-  max-height: 420px;
-  object-fit: cover;
+  font-weight: 500;
 }
 
 /* ── HOW TO PLAY ── */
@@ -316,6 +359,7 @@ body {
 }
 .how-to-play h2 {
   font-family: var(--font-display);
+  font-weight: 800;
   font-size: 3rem;
   margin-bottom: 16px;
 }
@@ -334,6 +378,7 @@ body {
 }
 .signup h2 {
   font-family: var(--font-display);
+  font-weight: 800;
   font-size: clamp(1.6rem, 3vw, 2.4rem);
   max-width: 640px;
   margin: 0 auto 16px;
@@ -379,7 +424,12 @@ body {
   align-items: center;
   gap: 28px;
 }
-.footer-logo { font-size: 1.4rem; }
+.footer-logo-img {
+  height: 36px;
+  width: auto;
+  filter: brightness(0) invert(1);
+  opacity: 0.85;
+}
 .footer-socials {
   display: flex;
   gap: 32px;
@@ -413,6 +463,13 @@ body {
 
   .tagline-dark { padding: 60px 24px 0; }
 
+  .about { padding: 60px 24px 60px; }
+  .about-inner {
+    flex-direction: column;
+    gap: 32px;
+  }
+  .about-photo img { width: 100%; max-width: 320px; margin: 0 auto; display: block; }
+
   .products { padding: 60px 24px; }
 
   .expansion-card {
@@ -420,14 +477,7 @@ body {
     gap: 32px;
     text-align: center;
   }
-  .expansion-cards-img img { width: 220px; max-width: 60vw; }
-
-  .about { padding: 60px 24px 0; }
-  .about-inner {
-    flex-direction: column;
-    gap: 32px;
-  }
-  .about-photo img { width: 100%; max-width: 320px; margin: 0 auto; display: block; }
+  .expansion-cards-img { width: 220px; max-width: 60vw; }
 
   .how-to-play { padding: 70px 24px; }
   .signup { padding: 70px 24px; }
