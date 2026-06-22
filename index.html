@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Swing State – The American Politics Card Game</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <a href="#" class="nav-logo">
+      <span class="logo-swing">SWING</span><span class="logo-state">STATE</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#how-to-play">How to Play</a></li>
+    </ul>
+    <button class="nav-hamburger" aria-label="Menu" onclick="toggleMenu()">&#9776;</button>
+  </nav>
+  <div class="nav-mobile" id="mobileMenu">
+    <a href="#about" onclick="toggleMenu()">About Us</a>
+    <a href="#products" onclick="toggleMenu()">Products</a>
+    <a href="#how-to-play" onclick="toggleMenu()">How to Play</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Swing State</h1>
+      <p class="hero-sub">The American Politics Card Game</p>
+      <a href="#products" class="btn btn-primary">Pre-Order Now</a>
+    </div>
+    <div class="hero-image">
+      <img src="images/product-box.png" alt="Swing State card game box" />
+    </div>
+  </section>
+
+  <!-- TAGLINE DARK -->
+  <section class="tagline-dark">
+    <p class="tagline-eyebrow">A FIERCE STRATEGIC RACE TO WIN THE PRESIDENTIAL ELECTION</p>
+    <h2>Love or hate the 2024 election results,<br />we created a game that lets us all poke<br />fun at all the chaos</h2>
+    <div class="card-fan">
+      <img src="images/cards-fan.png" alt="Swing State cards fanned out" />
+    </div>
+  </section>
+
+  <!-- BOX PRODUCT -->
+  <section class="box-product">
+    <img src="images/product-box.png" alt="Swing State box and card deck" />
+    <p class="box-includes">INCLUDES: 80+ UNIQUE CARDS, PROTECTIVE BOX</p>
+  </section>
+
+  <!-- PRODUCTS / EXPANSION PACKS -->
+  <section class="products" id="products">
+    <h2 class="section-title">Candidate Expansion Packs</h2>
+
+    <div class="expansion-card expansion-dems">
+      <div class="expansion-cards-img">
+        <img src="images/expansion-dems.png" alt="Democrat expansion pack cards" />
+      </div>
+      <div class="expansion-info">
+        <p class="expansion-eyebrow">CANDIDATE EXPANSION PACKS</p>
+        <h3>DEMOCRATS</h3>
+        <p class="expansion-includes">INCLUDES: 5 DEMOCRAT-THEMED CANDIDATE CARDS</p>
+      </div>
+    </div>
+
+    <div class="expansion-card expansion-reps">
+      <div class="expansion-info">
+        <p class="expansion-eyebrow">CANDIDATE EXPANSION PACKS</p>
+        <h3>REPUBLICANS</h3>
+        <p class="expansion-includes">INCLUDES: 5 REPUBLICAN-THEMED CANDIDATE CARDS</p>
+      </div>
+      <div class="expansion-cards-img">
+        <img src="images/expansion-reps.png" alt="Republican expansion pack cards" />
+      </div>
+    </div>
+
+    <div class="expansion-card expansion-ind">
+      <div class="expansion-cards-img">
+        <img src="images/expansion-ind.png" alt="Independent expansion pack cards" />
+      </div>
+      <div class="expansion-info">
+        <p class="expansion-eyebrow">CANDIDATE EXPANSION PACKS</p>
+        <h3>INDEPENDENTS</h3>
+        <p class="expansion-includes">INCLUDES: 5 INDEPENDENT-THEMED CANDIDATE CARDS</p>
+      </div>
+    </div>
+
+    <div class="expansion-card expansion-nsfw">
+      <div class="expansion-info">
+        <p class="expansion-eyebrow">EXPANSION PACK</p>
+        <h3>NSFW DECK</h3>
+        <p class="expansion-includes">INCLUDES: ADULT-THEMED CARDS FOR THE BOLD</p>
+      </div>
+      <div class="expansion-cards-img">
+        <img src="images/expansion-nsfw.png" alt="NSFW expansion pack cards" />
+      </div>
+    </div>
+  </section>
+
+  <!-- CARDS SCATTER -->
+  <section class="cards-scatter">
+    <img src="images/cards-scatter.png" alt="Scattered Swing State cards" />
+  </section>
+
+  <!-- ABOUT / KICKSTARTER -->
+  <section class="about" id="about">
+    <div class="about-inner">
+      <div class="about-text">
+        <p class="section-eyebrow">WHO AM I</p>
+        <h2>About Us</h2>
+        <p>I am a board game enthusiast who grew up with regular game nights playing Risk, Ticket to Ride, Sushi Go, Scythe, Skull, and more with my friends. I took that passion and paired it with copywriting skills, creativity, interest in politics, and more into this game.</p>
+        <p>Your support will help me fund the remaining work, cover for funds already put into the creation, and pay for manufacturing &amp; shipping of the game.</p>
+        <div class="kickstarter-logo">
+          <img src="images/kickstarter.png" alt="Kickstarter" />
+        </div>
+      </div>
+      <div class="about-photo">
+        <img src="images/about-photo.png" alt="About the creator" />
+      </div>
+    </div>
+    <div class="about-banner">
+      <img src="images/kickstarter.png" alt="Kickstarter campaign banner" />
+    </div>
+  </section>
+
+  <!-- HOW TO PLAY -->
+  <section class="how-to-play" id="how-to-play">
+    <p class="section-eyebrow">HOW TO PLAY</p>
+    <h2>Ready to Play?</h2>
+    <p class="how-sub">Download the full instructions and get your campaign started.</p>
+    <a href="/instructions" class="btn btn-primary" target="_blank" rel="noopener">Download Instructions</a>
+  </section>
+
+  <!-- EMAIL SIGNUP -->
+  <section class="signup">
+    <h2>Sign up for updates &amp; get notified when our Kickstarter goes live</h2>
+    <p>New card alerts, discounts and other freebies</p>
+    <form class="signup-form" onsubmit="handleSignup(event)">
+      <input type="email" placeholder="Enter your email" required aria-label="Email address" />
+      <button type="submit" class="btn btn-primary">Subscribe</button>
+    </form>
+    <p class="signup-success" id="signupSuccess">Thanks! We'll keep you posted.</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <a href="#" class="nav-logo footer-logo">
+      <span class="logo-swing">SWING</span><span class="logo-state">STATE</span>
+    </a>
+    <div class="footer-socials">
+      <a href="https://www.instagram.com/getswingstate" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg>
+        Instagram
+      </a>
+      <a href="https://www.tiktok.com/@getswingstate" target="_blank" rel="noopener" aria-label="TikTok">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.76a4.85 4.85 0 01-1.01-.07z"/></svg>
+        TikTok
+      </a>
+      <a href="https://www.kickstarter.com" target="_blank" rel="noopener" aria-label="Kickstarter">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4.5-4.5l-3 4.5h-2l3-4.5-3-3.5h2l3 3.5z"/></svg>
+        Kickstarter
+      </a>
+    </div>
+    <p class="footer-copy">&copy; 2024 Swing State. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
